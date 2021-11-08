@@ -1,0 +1,21 @@
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.io.File;
+public class PrintFromDesktopExample {
+    public static void main(String[] args) throws FileNotFoundException {
+
+        //Create a file
+        //example of whwre File is on Desktop: /Users/person/Desktop/test.txt
+        File file = new File("/Users/person/Desktop/test.txt");
+
+        //Create a scanner to scan the file
+        Scanner scan = new Scanner(file);
+
+        //Print out however many lines there are in the file
+        while(scan.hasNextLine()){
+            String line = scan.nextLine();
+            System.out.print(line);
+        }
+
+    }
+}
